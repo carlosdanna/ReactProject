@@ -7,11 +7,11 @@ var ingredients = [{"id": 1, "text": "ham"},
                   {"id": 2, "text": "cheese"},
                   {"id": 3, "text": "potatoes"}];
 
-class List extends React.createClass {
+class List extends React.Component {
   constructor(props){
     super(props);
+    this.state ={};
   }
-
 
   render(){
     var listItem = ingredients.map(function(item){
@@ -19,6 +19,5 @@ class List extends React.createClass {
     });
     return (<ul>{listItem}</ul>)
   }
-}
-
-export default List;
+};
+export default List
