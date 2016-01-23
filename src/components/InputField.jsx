@@ -4,7 +4,7 @@ import React from 'react';
 class InputField extends React.Component{
   constructor(props){
     super(props);
-    this.state = {
+    this.state ={
       value: ""
     };
     this.onChange = this.onChange.bind(this);

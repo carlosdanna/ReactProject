@@ -19067,6 +19067,80 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var CheckField = function (_React$Component) {
+  _inherits(CheckField, _React$Component);
+
+  function CheckField(props) {
+    _classCallCheck(this, CheckField);
+
+    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(CheckField).call(this, props));
+
+    _this.state = {
+      value: false
+    };
+
+    //binds
+    _this.onChange = _this.onChange.bind(_this);
+    return _this;
+  }
+
+  _createClass(CheckField, [{
+    key: "onChange",
+    value: function onChange(e) {
+      this.setState({
+        value: e.target.checked
+      });
+    }
+  }, {
+    key: "clear",
+    value: function clear() {
+      this.setState({
+        value: false
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        { className: "form-group" },
+        _react2.default.createElement(
+          "label",
+          null,
+          this.props.fieldName,
+          " "
+        ),
+        _react2.default.createElement("input", { clasName: "col-sm-3", type: "checkbox", onChange: this.onChange, checked: this.state.value })
+      );
+    }
+  }]);
+
+  return CheckField;
+}(_react2.default.Component);
+
+exports.default = CheckField;
+
+},{"react":159}],161:[function(require,module,exports){
+"use strict";
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -19149,7 +19223,7 @@ var EmailField = function (_React$Component) {
 
 exports.default = EmailField;
 
-},{"email-validator":2,"react":159}],161:[function(require,module,exports){
+},{"email-validator":2,"react":159}],162:[function(require,module,exports){
 "use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -19211,7 +19285,7 @@ var InputField = function (_React$Component) {
 
 exports.default = InputField;
 
-},{"react":159}],162:[function(require,module,exports){
+},{"react":159}],163:[function(require,module,exports){
 "use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -19270,7 +19344,7 @@ var List = function (_React$Component) {
 ;
 exports.default = List;
 
-},{"./ListItem.jsx":163,"react":159}],163:[function(require,module,exports){
+},{"./ListItem.jsx":164,"react":159}],164:[function(require,module,exports){
 "use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -19323,7 +19397,7 @@ var ListItem = function (_React$Component) {
 
 exports.default = ListItem;
 
-},{"react":159}],164:[function(require,module,exports){
+},{"react":159}],165:[function(require,module,exports){
 "use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -19344,6 +19418,10 @@ var _InputField = require('./InputField.jsx');
 
 var _InputField2 = _interopRequireDefault(_InputField);
 
+var _CheckField = require('./CheckField.jsx');
+
+var _CheckField2 = _interopRequireDefault(_CheckField);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -19358,10 +19436,41 @@ var PeopleForm = function (_React$Component) {
   function PeopleForm(props) {
     _classCallCheck(this, PeopleForm);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(PeopleForm).call(this, props));
+    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(PeopleForm).call(this, props));
+
+    _this.state = {
+      Firstname: "",
+      Lastname: "",
+      Description: "",
+      Email: "",
+      Active: false
+    };
+
+    _this.clear = _this.clear.bind(_this);
+    _this.sendRequest = _this.sendRequest.bind(_this);
+    return _this;
   }
 
   _createClass(PeopleForm, [{
+    key: 'clear',
+    value: function clear() {
+      this.refs.firstname.clear();
+      this.refs.lastname.clear();
+      this.refs.description.clear();
+      this.refs.email.clear();
+    }
+  }, {
+    key: 'sendRequest',
+    value: function sendRequest() {
+      this.setState({
+        Firstname: this.refs.firstname.state.value,
+        Lastname: this.refs.lastname.state.value,
+        Description: this.refs.description.state.value,
+        Email: this.refs.email.state.value,
+        Active: this.refs.active.state.value
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -19379,10 +19488,25 @@ var PeopleForm = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'panel-body' },
-          _react2.default.createElement(_InputField2.default, { type: 'Firsname', ref: 'fieldname' }),
+          _react2.default.createElement(_InputField2.default, { type: 'Firsname', ref: 'firstname' }),
           _react2.default.createElement(_InputField2.default, { type: 'Lastname', ref: 'lastname' }),
           _react2.default.createElement(_InputField2.default, { type: 'Description', ref: 'description' }),
-          _react2.default.createElement(_EmailField2.default, null)
+          _react2.default.createElement(_EmailField2.default, { ref: 'email' }),
+          _react2.default.createElement(_CheckField2.default, { fieldName: 'Active', ref: 'active' })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'row pull-right' },
+          _react2.default.createElement(
+            'button',
+            { className: 'btn btn-primary', onClick: this.clear },
+            'Clear'
+          ),
+          _react2.default.createElement(
+            'button',
+            { className: 'btn btn-default', onClick: this.sendRequest },
+            'Create'
+          )
         )
       );
     }
@@ -19393,7 +19517,7 @@ var PeopleForm = function (_React$Component) {
 
 exports.default = PeopleForm;
 
-},{"./EmailField.jsx":160,"./InputField.jsx":161,"react":159}],165:[function(require,module,exports){
+},{"./CheckField.jsx":160,"./EmailField.jsx":161,"./InputField.jsx":162,"react":159}],166:[function(require,module,exports){
 "use strict";
 
 var _react = require('react');
@@ -19417,4 +19541,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _reactDom2.default.render(_react2.default.createElement(_List2.default, null), document.getElementById('ingredients'));
 _reactDom2.default.render(_react2.default.createElement(_PeopleForm2.default, null), document.getElementById('field'));
 
-},{"./components/List.jsx":162,"./components/PeopleForm.jsx":164,"react":159,"react-dom":3}]},{},[165]);
+},{"./components/List.jsx":163,"./components/PeopleForm.jsx":165,"react":159,"react-dom":3}]},{},[166]);
