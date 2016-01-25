@@ -33,14 +33,14 @@ class EmailField extends React.Component {
       formClass = "form-group"
       return (
         <div className={formClass}>
-          <input className='form-control' onChange={this.onInputChange} placeholder="Email" />
+          <input className='form-control' onChange={this.onInputChange} value={this.state.value} placeholder="Email" />
         </div>);
     }else{
       formClass = "form-group has-error"
 
       return (
         <div className={formClass}>
-          <input className='form-control' onChange={this.onInputChange} placeholder="Email" />
+          <input className='form-control' onChange={this.onInputChange} value={this.state.value} placeholder="Email" />
           <span>Please enter a valid e-mail address</span>
         </div>);
     }
